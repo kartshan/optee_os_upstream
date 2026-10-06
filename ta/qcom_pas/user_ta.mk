@@ -4,6 +4,10 @@ ifneq ($(PLATFORM),qcom)
 user-ta-skip := y
 endif
 
+ifeq ($(PLATFORM_FLAVOR),rolas)
+user-ta-skip := y
+endif
+
 CFG_QCOM_PAS_AUTH ?= n
 
 ifeq ($(CFG_QCOM_PAS_AUTH),y)
